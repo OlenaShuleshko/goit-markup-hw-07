@@ -444,44 +444,44 @@
 		<!------modal window------->
 		<div class="backdrop is-hidden js-speaker-form" data-modal>
 			<div class="modal">
-				<div class="modal-popup">
+				<div class="modal__popup">
 					<button class="modal-close-btn" data-modal-close>
 						<svg class="modal-close-icon" width="11" height="11">
 							<use href="./images/sprite.svg#close"></use>
 						</svg>
 					</button>
 
-					<form class="modal-form js-speaker-form" name="modal-form">
-						<p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+					<form class="form js-speaker-form" name="modal-form">
+						<p class="form__title">Залиште свої дані, ми вам передзвонимо</p>
 
-						<div class="modal-form-wrapper">
-							<label class="modal-form-label" for="user_name">Ім'я</label>
-							<input class="modal-form-input" type="text" name="user_name" id="user_name" required />
-							<svg class="modal-form-icon" width="16" height="16">
+						<div class="form__wrapper">
+							<label class="form__label" for="user_name">Ім'я</label>
+							<input class="form__input" type="text" name="user_name" id="user_name" required />
+							<svg class="form__icon" width="16" height="16">
 								<use href="./images/sprite.svg#person"></use>
 							</svg>
 						</div>
 
-						<div class="modal-form-wrapper">
-							<label class="modal-form-label" for="tel">Телефон</label>
-							<input class="modal-form-input" type="tel" name="tel" id="tel" required />
-							<svg class="modal-form-icon" width="18" height="18">
+						<div class="form__wrapper">
+							<label class="form__label" for="tel">Телефон</label>
+							<input class="form__input" type="tel" name="tel" id="tel" required />
+							<svg class="form__icon" width="18" height="18">
 								<use href="./images/sprite.svg#tel"></use>
 							</svg>
 						</div>
 
-						<div class="modal-form-wrapper">
-							<label class="modal-form-label" for="mail">Пошта</label>
-							<input class="modal-form-input" type="email" name="mail" id="mail" required />
-							<svg class="modal-form-icon" width="18" height="18">
+						<div class="form__wrapper">
+							<label class="form__label" for="mail">Пошта</label>
+							<input class="form__input" type="email" name="mail" id="mail" required />
+							<svg class="form__icon" width="18" height="18">
 								<use href="./images/sprite.svg#mail"></use>
 							</svg>
 						</div>
 
-						<div class="modal-form-textarea">
-							<label class="modal-form-label" for="user_message">Коментар</label>
+						<div class="form__textarea">
+							<label class="form__label" for="user_message">Коментар</label>
 							<textarea
-								class="modal-form-message"
+								class="form__message"
 								name="user_message"
 								id="user_message"
 								rows="6"
@@ -489,14 +489,14 @@
 							></textarea>
 						</div>
 
-						<div class="modal-form-agreement" role="group">
-							<label class="modal-checkbox-agreement-label">
-								<input class="modal-form-checkbox" type="checkbox" name="agreement" value="agreement" required />
-								<span class="checkbox-icon-agreement"></span>
+						<div class="form__checkbox" role="group">
+							<label class="checkbox__label">
+								<input class="checkbox__input" type="checkbox" name="agreement" value="agreement" required />
+								<span class="checkbox__icon"></span>
 								Погоджуюся з розсилкою та приймаю
 								<a
 									href="https://uk.wikipedia.org/wiki/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D1%96%D1%80"
-									class="modal-link link"
+									class="checkbox__link link"
 									target="_blank"
 								>
 									Умови договору
@@ -504,7 +504,7 @@
 							</label>
 						</div>
 
-						<button type="submit" class="modal-form-btn">Відправити</button>
+						<button type="submit" class="form__btn">Відправити</button>
 					</form>
 				</div>
 			</div>

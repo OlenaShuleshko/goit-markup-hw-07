@@ -727,6 +727,20 @@ button {
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal__popup {
+	position: absolute;
+	padding: 40px;
+	width: 528px;
+	height: 581px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1);
+	transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+	border-radius: 4px;
+	background-color: var(--thirdy-color);
+}
+
 .modal-close-btn {
 	position: absolute;
 	display: inline-flex;
@@ -753,29 +767,13 @@ button {
 	fill: var(--acent-color);
 }
 
-/*-------modal forms-------- */
-
-.modal-popup {
-	position: absolute;
-	padding: 40px;
-	width: 528px;
-	height: 581px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(1);
-	transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
-	box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
-	border-radius: 4px;
-	background-color: var(--thirdy-color);
-}
-
-.modal-form {
+.form {
 	width: 448px;
 	margin-left: 0;
 	margin-right: 0;
 }
 
-.modal-title {
+.form__title {
 	margin-bottom: 12px;
 	font-weight: 700;
 	font-size: 20px;
@@ -784,7 +782,7 @@ button {
 	letter-spacing: 0.03em;
 }
 
-.modal-form-wrapper {
+.form__wrapper {
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -797,7 +795,7 @@ button {
 	margin-right: auto;
 }
 
-.modal-form-label {
+.form__label {
 	display: block;
 	margin-bottom: 4px;
 	font-size: 12px;
@@ -807,7 +805,7 @@ button {
 	color: var(--ouwer-text-color);
 }
 
-.modal-form-input {
+.form__input {
 	padding-left: 40px;
 	padding-right: 40px;
 	margin: 0;
@@ -821,7 +819,7 @@ button {
 	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-icon {
+.form__icon {
 	position: absolute;
 	top: 50%;
 	left: 15px;
@@ -829,17 +827,22 @@ button {
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-wrapper:focus-within .modal-form-input,
-.modal-form-wrapper:hover .modal-form-input {
+.form__wrapper:focus-within .form__input,
+.form__wrapper:hover .form__input {
 	border: 1px solid var(--acent-color);
 }
 
-.modal-form-wrapper:focus-within .modal-form-icon,
-.modal-form-wrapper:hover .modal-form-icon {
+.form__wrapper:focus-within .form__icon,
+.form__wrapper:hover .form__icon {
 	fill: var(--acent-btn-cl);
 }
 
-.modal-form-message {
+.form__textarea:hover .form__message,
+.form__textarea:focus-within .form__message {
+	border: 1px solid var(--acent-color);
+}
+
+.form__message {
 	display: block;
 	width: 100%;
 	height: 120px;
@@ -853,28 +856,25 @@ button {
 	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-textarea:hover .modal-form-message,
-.modal-form-textarea:focus-within .modal-form-message {
-	border: 1px solid var(--acent-color);
-}
-
-.modal-form-message::placeholder {
+.form__message::placeholder {
 	color: rgba(117, 117, 117, 0.5);
 }
-.modal-form-agreement {
+
+.form__checkbox {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 30px;
 	margin-top: 20px;
 }
-.modal-checkbox-agreement-label {
+
+.checkbox__label {
 	display: flex;
 	align-items: center;
 	color: var(--ouwer-text-color);
 }
 
-.modal-form-checkbox {
+.checkbox__input {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -885,7 +885,7 @@ button {
 	overflow: hidden;
 }
 
-.checkbox-icon-agreement {
+.checkbox__icon {
 	display: inline-block;
 	width: 16px;
 	height: 15px;
@@ -895,7 +895,7 @@ button {
 	border-radius: 2px;
 }
 
-.modal-form-checkbox:checked + .checkbox-icon-agreement {
+.checkbox__input:checked + .checkbox__icon {
 	background-color: var(--acent-color);
 	border-color: var(--acent-color);
 	background-image: url(../images/icon.svg);
@@ -916,13 +916,13 @@ button {
 	color: #757575;
 }
 
-.modal-link {
+.checkbox__link {
 	font-weight: 400;
 	text-decoration-line: underline;
 	color: var(--acent-color);
 }
 
-.modal-form-btn {
+.form__btn {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -947,7 +947,7 @@ button {
 	transition: background-color 250ms linear;
 }
 
-.modal-form-btn:hover,
-.modal-form-btn:focus {
+.form__btn:hover,
+.form__btn:focus {
 	background-color: var(--acent-btn-cl);
 }
