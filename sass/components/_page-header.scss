@@ -1,0 +1,15 @@
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 80px;
+	background-color: var(--background-color);
+	border-bottom: 1px solid rgba(236, 236, 236, 1);
+	z-index: var(--header-idx);
+}
+
+.header .container {
+	display: flex;
+	align-items: center;
+}
